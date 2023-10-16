@@ -1,6 +1,6 @@
 # Hands-on: COMMANDING DOCKER - Part 2
 
-![Alt text](<../PART 2/Images/image0.png>)
+![Alt text](Images/image0.png)
 
 Continuing from where we left off IN PART 1, let's further explore Docker commands.
 

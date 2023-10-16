@@ -1,5 +1,7 @@
 # Hands-on: Docker Storage Demystified
 
+![Alt text](images/image0.png)
+
 Are you ready to dive into the world of Docker storage solutions? Docker is known for its agility and efficiency, but understanding storage management can be a bit tricky. In this hands-on guide, we will walk you through each step, providing not just the "how" but also the "why" behind each action. Let's explore the world of Docker storage together.
 
 # Step 1: Start the AWS EC2 instance running Docker

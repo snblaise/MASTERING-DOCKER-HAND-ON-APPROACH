@@ -1,5 +1,7 @@
 # Hands-on: Docker Images
 
+![Alt text](images/image0.png)
+
  Docker has become a cornerstone technology for building, packaging, and deploying applications. As a developer or DevOps enthusiast, learning the ropes of Docker is essential. In this hands-on tutorial, we will embark on a journey to explore Docker images. Each step is designed to help you understand the process from start to finish.
 # Start the AWS EC2 instance running Docker
 
