@@ -1,6 +1,8 @@
-# Hands-on: Docker Commands - Part 2
+# Hands-on: COMMANDING DOCKER - Part 2
 
-Continuing from where we left off, let's further explore Docker commands.
+![Alt text](Images/image0.png)
+
+Continuing from where we left off IN PART 1, let's further explore Docker commands.
 
 ## Start the AWS EC2 instance running Docker
 

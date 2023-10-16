@@ -1,4 +1,6 @@
-# Hands-on: Docker Commands - Part 1
+# Hands-on: Part 2 COMMANDING DOCKER
+
+![Alt text](<Images/image0.png>)
 
 In this hands-on exercise, we will dive into some of the most essential Docker commands. Docker is a versatile tool for containerizing applications, making it easier to build, ship, and run them consistently across various environments. With these commands, you'll have the ability to effectively manage containers, images, volumes, and networks.
 

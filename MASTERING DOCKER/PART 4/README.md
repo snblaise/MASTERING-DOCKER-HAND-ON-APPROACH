@@ -1,19 +1,23 @@
 # Hands-on: Docker Images
 
+![Alt text](images/image0.png)
+
+ Docker has become a cornerstone technology for building, packaging, and deploying applications. As a developer or DevOps enthusiast, learning the ropes of Docker is essential. In this hands-on tutorial, we will embark on a journey to explore Docker images. Each step is designed to help you understand the process from start to finish.
 # Start the AWS EC2 instance running Docker
 
-Access AWS, navigate to EC2, and then start the VM created for Docker usage.
+Before we dive into Docker images, we need a Docker-ready environment. Amazon Web Services (AWS) offers a robust infrastructure, and we start by launching an EC2 instance equipped with Docker. This instance will serve as our creative workspace for crafting Docker images.
 
 # Cleaning the Environment:
 
-Clean your Docker environment:
+An artist needs a clean canvas, and so does a Docker image creator. By executing docker system prune, we tidy up our Docker environment. This step ensures that we have a fresh and clutter-free canvas for our Docker images.
 
 ```
 docker system prune -a -f --volumes
 
 ```
 
-Create a new directory and switch to it:
+# Create a new directory and switch to it:
+Organizing your work is crucial. We create a new directory named docker-images and navigate to it. This dedicated workspace keeps our Docker image-related files neatly organized and accessible.
 
 ```
 mkdir docker-images
@@ -21,7 +25,8 @@ cd docker-images
 
 ```
 
-Create a index.html file with the content below:
+# Create a index.html file with the content below:
+An image is more than code; it's an application with character. We begin by creating an index.html file, designed with a simple yet elegant structure. To add personality, we also craft a style.css file. These files form the soul of our Docker image.
 
 ```html
 <!DOCTYPE html>
@@ -73,9 +78,9 @@ h2{
 }
 ```
 
-# Dockerfile:
 
-Create a Dockerfile:
+# Create a Dockerfile:
+he Dockerfile is the blueprint of our image. In it, we specify the base image (Python 2.7), set the working directory, copy our HTML and CSS files, define the exposed port, and launch a Python HTTP server. It's the core recipe for our Docker image.
 
 ```docker
 FROM python:2.7
@@ -93,7 +98,8 @@ CMD python -m SimpleHTTPServer 3000
 
 ---
 
-Build the Docker image:
+# Build the Docker image:
+With our Dockerfile ready, we proceed to build our Docker image using the docker build command. This step blends the Dockerfile's instructions with the application's code, creating a coherent masterpiece - our Docker image.
 
 ```
 docker build . -t python-simple-httpserver:v1.0
@@ -101,7 +107,7 @@ docker build . -t python-simple-httpserver:v1.0
 ```
 ![Successful build](images/image2.png)
 Check your Docker images:
-
+After the build, we use docker images to reveal our newly crafted Docker image. This step ensures that our creation is ready for action, and it's the moment where our creation comes to life.
 ```
 docker images
 
@@ -125,8 +131,7 @@ After running the docker container check the running instances.
 ![Alt text](images/image5.png)
 
 # Changing the Dockerfile:
-
-Change the Dockerfile to now COPY all files to the Docker image:
+An artist never stops evolving. In this step, we enhance our Docker image by modifying the Dockerfile to include all project files. With these changes, we create version 2.0 of our image.
 
 ```docker
 FROM python:2.7
@@ -180,7 +185,7 @@ docker tag <imageid> <userid>/python-simple-httpserver:v2.0
 ![Reader image to be pushed](images/image10.png)
 
 # Docker Push:
-To push your image to the Dockerhub repository you need to login via you terminal with your dockerbub credential. 
+To share our creation with the world, we need to upload it to a central repository. We create a DockerHub account, tag our Docker image, and push it to the repository. This step ensures that our image is accessible for others to use.
 
 ```
 docker login
@@ -200,15 +205,16 @@ let's chech our dockerhub repo to for make sure our images was pushed.
 ![Push images](images/image13.png)
 
 # Docker Container Process Info:
+Finally, we explore running Docker containers with `docker top` and gather statistics using `docker stats`. This step helps us gain insights into the processes and performance of our Docker image.
 
-we can also get more information from  a running processes in a container like user ID, Process ID, start time of a process, the command started the process and how many times it has been executed using the following commands. 
+`docker top` give us more information from  a running processes in a container like user ID, Process ID, start time of a process, the command started the process and how many times it has been executed. 
 
 ```
 docker top <containerid>
 ```
 ![Docker running process](images/image14.png)
 
-Statistics bout our running docker container such as CPU usage, memory usage, network etc. can be gotten using the following.
+`docker stat` give us Statistics about our running docker container such as CPU usage, memory usage, network etc.
 
 ```
 docker stats 
