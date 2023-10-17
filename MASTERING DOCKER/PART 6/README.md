@@ -3,6 +3,7 @@
 ![Alt text](image/image0.png)
 
 **Introduction:**
+
 Docker is a robust platform for containerization, known for its powerful networking capabilities. In this hands-on walkthrough, we will explore various Docker networking modes, create custom networks, and ensure container isolation. Below, you'll find the steps and corresponding commands to follow along.
 
 ## **Section 1: Setting the Stage**
